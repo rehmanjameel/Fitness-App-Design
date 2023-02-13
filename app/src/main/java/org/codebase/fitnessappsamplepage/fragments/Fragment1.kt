@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import com.example.horizontalcalendar.DateItemClickListener
 import kotlinx.android.synthetic.main.fragment_1.*
@@ -21,6 +22,8 @@ class Fragment1 : Fragment(), DateItemClickListener {
         val view = inflater.inflate(R.layout.fragment_1, container, false)
 
         view.horizontal_calendar.initialize(this)
+        val text = view.findViewById<TextView>(R.id.seekTextId3)
+        text.text = getString(R.string.text3)
         return view
     }
 
